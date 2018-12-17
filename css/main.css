@@ -1,0 +1,332 @@
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 1600px;
+	@font-face {
+	font-family: 'Exo 2', sans-serif;
+}
+}
+
+
+/*задний фон*/
+.pattern { 
+	margin: 0;
+	background: url("../images/background.png");
+	z-index: 1;
+}
+
+/*задний фон добавление тени*/
+.pattern:before {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: url("../images/shadow.png") 0 0/100% 100% no-repeat;
+	z-index: -1;
+}
+
+/*заголовок*/
+.title{
+	padding-top: 50px;
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+	font-family: 'Exo 2';
+
+}
+
+/*основной бокс с информацией Нямушка*/
+.boxStack {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+
+}
+.boxBody {
+	color:hsla(0,0%,70%,.5);
+	cursor:pointer;
+	margin: 25px 40px;
+}
+.boxHeader{
+	display:flex;
+	height:44px;
+	margin-bottom:-1px
+}
+/*скошенный угол*/
+.boxCorner {
+	position:relative;
+	width:43px;
+	background:linear-gradient(-45deg,#f2f2f2,#f2f2f2 28.5px,#1698d9 0,#1698d9 32px,transparent 0);
+}
+.boxRectangle{
+	flex-grow:1;
+	padding:15px 0 0 8px;
+	border:4px solid #1698d9;
+	border-bottom:none;
+	border-left:none;
+	border-radius:0 12px 0 0;
+	background:#f2f2f2;
+}
+.boxDescription{
+	color: #666;
+	font-size: 16px;
+	font-family: "Trebuchet Regular";
+}
+
+.boxDescriptionSelected{
+	display: none;
+}
+.boxMain {
+	position:relative;
+	z-index:10;
+	overflow:hidden;
+	width:100%;
+	height:437px;
+	margin-bottom:15px;
+	box-sizing:border-box;
+	padding:0 46px 25px;
+	border:4px solid #1698d9;
+	border-top:none;
+	border-radius:0 0 10px 10px;
+	background:#f2f2f2;
+}
+/*название Нямушка*/
+.boxName{
+	position:relative;
+	z-index:10;
+	margin:0 0 15px;
+	font-size:48px;
+	color: #000;
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+
+}
+/*с каким вкусом*/
+.nameWith {
+	display: block;
+	font-size: 24px;
+
+}
+.mouses{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #666;
+	font-size: 14px;
+}
+.numberPortions{
+	font-weight: bold;
+}
+/*картинка кота*/
+.catImg {
+	position:absolute;
+	bottom:-90px;
+	left:-25px;
+	z-index:0;
+	width: 370px;
+}
+
+/*вес продукта*/
+.boxCircle {
+	position:absolute;
+	bottom:15px;
+	right:15px;
+	width:81px;
+	height:81px;
+	border-radius:50%;
+	background:#1698d9;
+	color:#fff;
+	text-align:center;
+	font-family: 'Trebuchet MS';
+}
+.boxWeight{
+	position: relative;
+	font-size: 42px;
+}
+.weightAmount {
+	font-size: 21px;
+}
+.boxFooter {
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	font-family: 'Trebuchet MS';
+}
+/*изменения при наведении на объект*/
+
+.boxBody:hover
+.boxCorner {
+	background:linear-gradient(-45deg,#f2f2f2,#f2f2f2 28.5px,#2ea9e6 0,#2ea9e6 32px,transparent 0);
+}
+
+.boxBody:hover
+.boxRectangle {
+	border-color:#2ea9e6;
+}
+
+.boxBody:hover
+.boxMain {
+	border-color:#2ea9e6;
+}
+
+.boxBody:hover
+.boxCircle {
+	background:#2ea9e6;
+}
+
+/*объект выбран*/
+.boxCornerSelected{
+	background:linear-gradient(-45deg,#f2f2f2,#f2f2f2 28.5px,#d91667 0,#d91667 32px,transparent 0);
+}
+.boxRectangleSelected{
+  border-color: #d91667;
+}
+
+.boxMainSelected{
+	border-color: #d91667;
+}
+.boxCircleSelected{
+	background: #d91667;
+}
+
+.boxBuyChange1{
+	display: block;
+	color: #fff;
+}
+.boxBuySold1 {
+	display: none;
+}
+/*наведение на выбранный объект*/
+.boxBodySelected:hover
+.boxCornerSelected{
+	background:linear-gradient(-45deg,#f2f2f2,#f2f2f2 28.5px,#e62e7a 0,#e62e7a 32px,transparent 0);
+}
+.boxBodySelected:hover
+.boxRectangleSelected{
+  border-color: #e62e7a;
+}
+.boxBodySelected:hover
+.boxMainSelected{
+	border-color: #e62e7a;
+}
+
+.boxBodySelected:hover
+.boxCircleSelected{
+	background: #e62e7a;
+}
+.boxBodySelected:hover
+.boxDescription{
+	display: none;
+}
+.boxBodySelected:hover
+.boxDescriptionSelected{
+	display: block;
+	color: #e62e7a;
+}
+/*изменения при выборе (отсутсвии товара)*/
+.boxBuyChange, .boxBuySold {
+	display: none;	
+}
+
+/*объект недоступен*/
+.boxHeaderDisabled {
+	color: #b3b3b3;
+}
+.boxCornerDisabled{
+	background:linear-gradient(-45deg,#f2f2f2,#f2f2f2 28.5px,#b3b3b3 0,#b3b3b3 32px,transparent 0);
+}
+.boxRectangleDisabled{
+	border-color: #b3b3b3;
+}
+
+.boxMainDisabled{
+	color: #b3b3b3;
+	border-color: #b3b3b3;
+}
+.boxCircleDisabled{
+	background: #b3b3b3;
+}
+.boxNameDisabled, .nameWithDisabled, .mousesDisabled {
+	color: #b3b3b3;
+}
+.catImgDisabled{
+	opacity: 0.5;
+}
+.boxFooterDisabled, .boxBuyChangeDisabled{
+	display: none;
+	}
+.boxBuySoldDisabled {
+	display: block;	
+	color: yellow;
+}
+/*адаптивность сайта*/
+@media all and (max-width: 1800px) {
+  .pattern {
+    height: auto;
+  }
+
+  .boxStack {
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .boxBody {
+    margin-right: 80px;
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .pattern {
+    height: auto;
+  }
+
+  .boxStack {
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .boxBody {
+    margin-right: 80px;
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 768px) {
+  .pattern {
+    height: auto;
+
+  }
+
+  .boxBody {
+    margin-right: 20px;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .pattern {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boxBody {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  
+}
+
+@media all and (max-width: 374px) {
+  .boxBody {
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .boxBody {
+    width: 300px;
+  }
+}

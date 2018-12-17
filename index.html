@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Нямушка</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:100&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body class="pattern" id="pattern">
+	<div class="title" id="title">Ты сегодня покормил кота?</div>
+	<div class="boxStack" id="boxStack">
+
+		<!-- первый бокс-->
+		<div class="boxBody" id="boxBody">
+			<div class="boxHeader" id="boxHeader"> 
+				<div class="boxCorner" id="boxCorner"></div>
+				<div class="boxRectangle" id="boxRectangle"><span class="boxDescription" id="boxDescription">Сказочное заморское яство</span><span class="boxDescriptionSelected">Котэ не одобряет?</span>
+				</div>
+			</div>
+			<div class="boxMain" id="boxMain">
+				<h2 class="boxName" id="boxName">Нямушка<br><span class="nameWith" id="nameWith">с фуа-гра</span></h2>
+				<ul class="mouses">
+					<li><span class="numberPortions">10</span> порций</li>
+					<li>мышь в подарок</li>
+				</ul>
+				<img class="catImg" id="catImg" src="images/cat.png" alt="котик">
+					<div class="boxCircle" id="boxCircle">
+						<div class="boxWeight" 	id="boxWeight"><span id="boxWeight">	0,5</span>
+						</div>
+						<div class="weightAmount" id="weightAmount">кг</div>
+					</div>
+			</div>
+				<footer class="boxFooter"><span>Чего сидишь? Порадуй котэ, <span class="boxBuy"><a class="boxLink" href="#">купи</a><span class="boxBuyChange">Печень утки разварная с артишоками.</span><span class="boxBuySold">Печалька, с фуа-гра закончился.</span>
+				</footer>
+		</div>
+	
+
+
+		<!-- второй бокс-->
+		<div class="boxBody boxBodySelected">
+			<div class="boxHeader boxHeaderSelected"> 
+				<div class="boxCorner boxCornerSelected"></div>
+				<div class="boxRectangle boxRectangleSelected"> <span class="boxDescription" id="boxDescription">Сказочное заморское яство</span><span class="boxDescriptionSelected">Котэ не одобряет?</span>
+				</div>
+			</div>
+			<div class="boxMain boxMainSelected">
+				<h2 class="boxName" id="boxName">Нямушка<br><span class="nameWith" id="nameWith">с рыбой</span></h2>
+				<ul class="mouses">
+					<li> <span class="numberPortions">40</span> порций</li>
+					<li>2 мыши в подарок</li>
+				</ul>
+				<img class="catImg" id="catImg" src="images/cat.png" alt="котик">
+					<div class="boxCircle boxCircleSelected">
+						<div class="boxWeight" 	id="boxWeight"><span id="boxWeight">	2</span>
+						</div>
+						<div class="weightAmount" id="weightAmount">кг</div>
+					</div>
+			</div>
+			<footer class="boxFooter"><span class="boxFooterDisabled">Чего сидишь? Порадуй котэ,<a class="boxLink" href="#">купи</a></span><span class="boxBuyChange boxBuyChange1">Головы щучьи с чесноком, да свежайшая сёмгушка.</span><span class="boxBuySold">Печалька, с рыбой закончился.</span>
+			</footer>
+		</div>
+
+		<!--третий бокс-->
+		<div class="boxBody boxBodyDisabled">
+			<div class="boxHeader boxHeaderDisabled"> 
+				<div class="boxCorner boxCornerDisabled"></div>
+				<div class="boxRectangle boxRectangleDisabled"> <span class="boxDescription">Сказочное заморское яство</span>
+				</div>
+			</div>
+			<div class="boxMain boxMainDisabled">
+				<h2 class="boxName boxNameDisabled">Нямушка<br><span class="nameWith nameWithDisabled">с курой</span></h2>
+				<ul class="mouses mousesDisabled">
+					<li> <span class="numberPortions">100</span> порций</li>
+					<li>5 мышей в подарок</li>
+					<li>заказчик доволен</li>
+				</ul>
+				<img class="catImg catImgDisabled" src="images/cat.png" alt="котик">
+				<div class="boxCircle boxCircleDisabled">
+						<div class="boxWeight"><span>5</span>
+						</div>
+						<div class="weightAmount" id="weightAmount">кг</div>
+					</div>
+			</div>
+			<footer class="boxFooter"><span class="boxFooterDisabled">Чего сидишь? Порадуй котэ,<a class="boxLink" href="#">купи</a></span><span class="boxBuyChange boxBuyChangeDisabled">Филе из цыплят с трюфелями в бульоне.</span><span class="boxBuySold boxBuySoldDisabled">Печалька, с рыбой закончился.</span>
+			</footer>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
+
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
